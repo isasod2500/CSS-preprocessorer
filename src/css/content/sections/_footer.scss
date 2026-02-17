@@ -12,6 +12,9 @@
     }
 
     a {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: light-dark(lighten($button-color, 30%), darken($button-color, 10%));
         font-size: 20px;
         @include link-styling;
     }

@@ -16,7 +16,7 @@
 
 @mixin link-styling {
     text-decoration: none;
-
+    color: light-dark(#000000, #FFFFFF);
     &:hover {
         text-decoration: underline;
     }
