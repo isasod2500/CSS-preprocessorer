@@ -8,13 +8,28 @@
         display: grid;
         grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
         justify-items: center;
-        @include ul-format-s;
+        text-align: center;
+        @include ul-format;
         padding: 1rem 0 1rem 0;
     }
 
     a {
         font-size: 1.3rem;
+        padding: 0 4px 0 4px;
+        
         @include link-styling;
-        color: light-dark(#000000, #FFFFFF)
+        color: light-dark(#000000, #FFFFFF);
+        word-break:keep-all;
+        
+    }
+
+    a.disabled {
+        @if $link-disabled {
+            cursor: not-allowed;
+            text-decoration: none;
+        } @else {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 }
